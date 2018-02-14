@@ -1,0 +1,23 @@
+
+
+<p><%= @restaurant.name  %></p>
+
+<p><%= @restaurant.address  %></p>
+
+<p><%= @restaurant.phone_number  %></p>
+
+<p> <%= @restaurant.reviews[1].content %> </p>
+
+<p> <%= @restaurant.reviews[1].rating %> </p>
+
+<p> <%= @restaurant.category %></p>
+
+<p><%= link_to "Edit the Restaurant", edit_restaurant_path %></p>
+
+<p><%= link_to 'Delete', restaurant_path(@restaurant),
+method: :delete,
+data: { confirm: "Are you sure?" } %> </p>
+
+<p><%= link_to "Back to List", root_path %></p>
+
+<p><%= link_to "Review", new_restaurant_review_path(@restaurant) %></p>
